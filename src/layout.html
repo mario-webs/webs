@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="theme-color" content="#2a1610">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="De María">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+{{head}}
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="{{bodyclass}}">
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="site" data-header>
+  <a class="brand" href="index.html" aria-label="De María, inicio">
+    <svg viewBox="-4 -4 1607 822" aria-hidden="true"><use href="#logo"/></svg>
+    <span class="brand-text">Asador argentino<br>Madrid, desde 1994</span>
+  </a>
+  <nav class="nav" id="menu" aria-label="Principal">
+    <ul class="nav-list">
+      <li><a data-nav="carta" href="carta.html">Carta</a></li>
+      <li class="nav-casas">
+        <button class="casas-btn" type="button" aria-expanded="false" aria-controls="casas-panel">Casas</button>
+        <ul class="casas-panel" id="casas-panel" hidden>
+          <li><a data-nav="felix-boix" href="felix-boix.html"><b>Félix Boix</b><span>Félix Boix, 5 · Chamartín</span><span class="st" data-status="felix-boix">Todos los días</span></a></li>
+          <li><a data-nav="preciados" href="preciados.html"><b>Preciados</b><span>Preciados, 32 · Sol</span><span class="st" data-status="preciados">Todos los días</span></a></li>
+          <li><a data-nav="majadahonda" href="majadahonda.html"><b>Majadahonda</b><span>Av. de las Moreras, 42</span><span class="st" data-status="majadahonda">Horario por teléfono</span></a></li>
+        </ul>
+      </li>
+      <li><a data-nav="la-casa" href="la-casa.html">La casa</a></li>
+      <li><a data-nav="grupos" href="grupos.html">Grupos</a></li>
+    </ul>
+  </nav>
+  <a class="btn btn-head" data-nav="reservar" href="reservar.html">Reservar</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+</header>
+
+<main id="main">
+{{main}}
+</main>
+
+<footer class="foot grain">
+  <div class="foot-cta" data-reveal>
+    <p class="foot-claim">La brasa sigue encendida</p>
+    <div class="foot-actions">
+      <a class="btn" href="reservar.html">Reservar mesa</a>
+      <a class="more" href="grupos.html">Grupos y eventos</a>
+    </div>
+  </div>
+  <div class="foot-casas">
+    <div class="foot-casa" data-reveal>
+      <h2><a href="felix-boix.html">Félix Boix</a></h2>
+      <p>Calle Félix Boix, 5<br>28036 Madrid · Chamartín</p>
+      <p class="soft">Todos los días<br>13:00–16:30 y 20:30–1:00</p>
+      <p class="st" data-status="felix-boix">Todos los días</p>
+      <p><a class="foot-tel" href="tel:+34913596507">913 596 507</a></p>
+    </div>
+    <div class="foot-casa" data-reveal>
+      <h2><a href="preciados.html">Preciados</a></h2>
+      <p>Calle de Preciados, 32<br>28013 Madrid · Sol</p>
+      <p class="soft">Todos los días<br>12:30–1:30</p>
+      <p class="st" data-status="preciados">Todos los días</p>
+      <p><a class="foot-tel" href="tel:+34915211603">915 211 603</a></p>
+    </div>
+    <div class="foot-casa" data-reveal>
+      <h2><a href="majadahonda.html">Majadahonda</a></h2>
+      <p>Av. de las Moreras, 42<br>28220 Majadahonda</p>
+      <p class="soft">Sin horario publicado<br>Llama antes de ir</p>
+      <p class="st" data-status="majadahonda">Horario por teléfono</p>
+      <p><a class="foot-tel" href="tel:+34916027419">916 027 419</a></p>
+    </div>
+  </div>
+  <nav class="foot-links" aria-label="Pie de página" data-reveal>
+    <a href="carta.html">Carta</a>
+    <a href="la-casa.html">La casa</a>
+    <a href="grupos.html">Grupos y eventos</a>
+    <a href="reservar.html">Reservar</a>
+    <a href="https://www.instagram.com/demariarestaurante/" target="_blank" rel="noopener">Instagram</a>
+    <a href="legal.html">Aviso legal y créditos</a>
+  </nav>
+  <svg class="foot-logo" data-reveal viewBox="-4 -4 1607 822" role="img" aria-label="De María"><use href="#logo"/></svg>
+  <p class="foot-legal">© 2026 De María Restaurantes S.L. · Asador argentino en Madrid desde 1994</p>
+</footer>
+
+{{logo}}
+<script src="js/main.js" defer></script>
+</body>
+</html>

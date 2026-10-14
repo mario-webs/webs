@@ -1,0 +1,70 @@
+<!--{"title":"Grupos y eventos · De María Félix Boix","description":"Comidas de empresa, celebraciones y catering en De María: reservado para 50 personas, dos salones para 200, menú degustación 30 € y menú especial 50 €.","nav":"grupos"}-->
+<section class="page-head grid" aria-labelledby="gr-t">
+  <h1 id="gr-t" data-reveal>Grupos y eventos</h1>
+  <div class="ph-lead" data-reveal>
+    <p class="statement">Comidas de empresa, celebraciones y catering, con un reservado para cincuenta personas y dos salones para doscientas.</p>
+    <div class="actions">
+      <a class="btn" href="#presupuesto">Pedir presupuesto</a>
+      <a class="more" href="tel:+34913596507">913 596 507</a>
+    </div>
+  </div>
+  <figure class="ph-photo narrow" data-reveal>
+    <div class="ph r45"><img src="img/salon-ladrillo-600.webp" srcset="img/salon-ladrillo-300.webp 300w, img/salon-ladrillo-600.webp 600w" sizes="(min-width: 900px) 30vw, 84vw" width="600" height="750" alt="El reservado de Félix Boix, con techo artesonado y paredes de ladrillo" fetchpriority="high"></div>
+    <figcaption class="cap">El reservado de Félix Boix. Foto: Privateaser.</figcaption>
+  </figure>
+</section>
+
+<section class="tbl grid" aria-labelledby="gr-esp">
+  <h2 id="gr-esp" data-reveal>Espacios y menús</h2>
+  <figure class="tbl-photo" data-reveal>
+    <div class="ph r34"><img src="img/mesa-800.webp" srcset="img/mesa-800.webp 800w, img/mesa-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw" width="1200" height="1600" alt="Una mesa con entrantes para compartir: jamón, tomate relleno y mollejas" loading="lazy"></div>
+    <figcaption class="cap">Entrantes al centro, para compartir.</figcaption>
+  </figure>
+  <p class="tbl-name" data-reveal>Félix Boix</p>
+  <ul class="rows" data-reveal>
+    <li class="row"><span class="k">Reservado</span><span class="v">Privado</span><span class="r">Hasta 50 personas</span></li>
+    <li class="row"><span class="k">Salones</span><span class="v">Dos salones</span><span class="r">Hasta 200 personas</span></li>
+    <li class="row"><span class="k">Terraza</span><span class="v">En temporada</span><span class="r">Consultar</span></li>
+    <li class="g row"><span class="k">Menú</span><span class="v">Degustación</span><span class="r">30 € por persona</span></li>
+    <li class="row"><span class="k">Menú</span><span class="v">Especial</span><span class="r">50 € por persona</span></li>
+    <li class="g row"><span class="k">Para</span><span class="v">Empresas</span><span class="r">Comidas y cenas</span></li>
+    <li class="row"><span class="k">Para</span><span class="v">Celebraciones</span><span class="r">Cumpleaños, familia</span></li>
+    <li class="row"><span class="k">Fuera</span><span class="v">Catering</span><span class="r">Bajo presupuesto</span></li>
+  </ul>
+  <p class="rows-note" data-reveal>Los menús cambian con la temporada: te mandamos los platos con el presupuesto.</p>
+</section>
+
+<section class="split split-dark grain" aria-labelledby="gr-salones">
+  <figure class="split-photo"><img src="img/salon-3-1000.webp" srcset="img/salon-3-1000.webp 1000w, img/salon-3-1500.webp 1500w" sizes="(min-width: 900px) 50vw, 100vw" width="1500" height="750" alt="Salón de ladrillo de Félix Boix preparado con mantel blanco y flores" loading="lazy"></figure>
+  <div class="split-text" data-reveal>
+    <h2 id="gr-salones">Los salones, para vosotros</h2>
+    <p>Dos salones para 200 personas y un reservado para 50, con el mismo servicio de chaqueta blanca y el ritual de siempre: las salsas al sentarse y el sorbete al final.</p>
+    <a class="more" href="#presupuesto">Pedir presupuesto</a>
+  </div>
+</section>
+
+<section class="form-sec grid" id="presupuesto" aria-labelledby="gr-form">
+  <form class="form-main" data-grupo novalidate>
+    <h2 id="gr-form" class="statement">Cuéntanos qué celebras y te preparamos la propuesta.</h2>
+    <div class="fields">
+      <label class="field"><span>Tipo de encuentro</span>
+        <select name="tipo" required><option>Una comida de empresa</option><option>Una cena de empresa</option><option>Una celebración</option><option>Un catering</option></select>
+      </label>
+      <label class="field"><span>Casa</span>
+        <select name="casa" required><option>Félix Boix</option><option>Preciados</option><option>Majadahonda</option></select>
+      </label>
+      <label class="field"><span>Fecha</span><input type="date" name="fecha" required><small class="err">Elige una fecha.</small></label>
+      <label class="field"><span>Personas</span><input type="number" name="personas" min="2" max="200" value="20" required><small class="err">Entre 2 y 200 personas.</small></label>
+      <label class="field"><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required><small class="err">Dinos tu nombre.</small></label>
+      <label class="field"><span>Teléfono</span><input type="tel" name="telefono" autocomplete="tel" required pattern="[0-9 +]{9,15}"><small class="err">Un teléfono de 9 cifras o más.</small></label>
+      <label class="field full"><span>Correo</span><input type="email" name="correo" autocomplete="email" required><small class="err">Un correo válido.</small></label>
+      <label class="field full"><span>Algo más</span><textarea name="mensaje" placeholder="Horario, alergias, si queréis el reservado…"></textarea></label>
+    </div>
+    <button class="btn" type="submit">Enviar la petición por correo</button>
+    <p class="form-note">Se abre tu programa de correo con todo escrito. No guardamos nada en esta web.</p>
+  </form>
+  <aside class="form-aside" data-reveal>
+    <div class="ph r45"><img src="img/salon-3-1000.webp" srcset="img/salon-3-1000.webp 1000w, img/salon-3-1500.webp 1500w" sizes="(min-width: 900px) 50vw, 100vw" width="1500" height="750" alt="Salón de ladrillo preparado con mantel blanco" loading="lazy"></div>
+    <p class="cap">Si lo prefieres, llama a Félix Boix: <a href="tel:+34913596507">913 596 507</a> o <a href="tel:+34648060500">648 06 05 00</a>.</p>
+  </aside>
+</section>

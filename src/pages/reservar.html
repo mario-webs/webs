@@ -1,0 +1,59 @@
+<!--{"title":"Reservar mesa · De María","description":"Reserva mesa en De María Félix Boix, Preciados o Majadahonda: elige casa, personas, día y hora.","nav":"reservar"}-->
+<section class="page-head grid" aria-labelledby="rs-t">
+  <h1 id="rs-t" data-reveal>Reservar mesa</h1>
+  <div class="ph-lead" data-reveal>
+    <p class="statement">Elige la casa, cuántos sois y a qué hora. La casa te confirma la mesa.</p>
+  </div>
+</section>
+
+<section class="form-sec grid" aria-label="Formulario de reserva">
+  <form class="form-main" id="book-form" data-book novalidate>
+    <fieldset data-reveal>
+      <legend>Casa</legend>
+      <div class="choices">
+        <label class="choice" data-reveal><input type="radio" name="casa" value="felix-boix" checked><span class="ph"><img sizes="(min-width: 900px) 50vw, 100vw" srcset="img/entrada-fb-800.webp 800w, img/entrada-fb-975.webp 975w" src="img/entrada-fb-800.webp" width="975" height="1300" alt="" loading="lazy"></span><b>Félix Boix</b><span>Félix Boix, 5 · Chamartín</span><span class="st" data-status="felix-boix">Todos los días</span></label>
+        <label class="choice" data-reveal><input type="radio" name="casa" value="preciados"><span class="ph"><img sizes="(min-width: 900px) 50vw, 100vw" srcset="img/fachada-preciados-1000.webp 1000w, img/fachada-preciados-1536.webp 1536w" src="img/fachada-preciados-1000.webp" width="1536" height="1920" alt="" loading="lazy"></span><b>Preciados</b><span>Preciados, 32 · Sol</span><span class="st" data-status="preciados">Todos los días</span></label>
+        <label class="choice" data-reveal><input type="radio" name="casa" value="majadahonda"><span class="ph"><img sizes="(min-width: 900px) 50vw, 100vw" srcset="img/chuleton-1000.webp 1000w, img/chuleton-2047.webp 2047w" src="img/chuleton-1000.webp" width="2047" height="1535" alt="" loading="lazy"></span><b>Majadahonda</b><span>Av. de las Moreras, 42</span><span class="st" data-status="majadahonda">Horario por teléfono</span></label>
+      </div>
+    </fieldset>
+
+    <fieldset data-reveal>
+      <legend>Personas</legend>
+      <div class="stepper">
+        <button type="button" data-step="-1" aria-label="Una persona menos">−</button>
+        <output data-people aria-live="polite">2</output>
+        <button type="button" data-step="1" aria-label="Una persona más">+</button>
+      </div>
+    </fieldset>
+
+    <div class="fields" data-reveal>
+      <label class="field"><span>Día</span><input type="date" name="dia" required><small class="err">Elige un día a partir de hoy.</small></label>
+      <label class="field"><span>Hora</span><select name="hora"></select></label>
+      <label class="field" hidden><span>Hora aproximada</span><input type="time" name="hora_libre"><small class="err">Indica una hora.</small></label>
+    </div>
+
+    <fieldset data-reveal>
+      <legend>Mesa</legend>
+      <div class="seg">
+        <label data-reveal><input type="radio" name="zona" value="Salón" checked><span>Salón</span></label>
+        <label data-reveal><input type="radio" name="zona" value="Terraza"><span>Terraza</span></label>
+        <label data-reveal><input type="radio" name="zona" value="Reservado"><span>Reservado</span></label>
+      </div>
+    </fieldset>
+
+    <div class="fields" data-reveal>
+      <label class="field"><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required><small class="err">Dinos a nombre de quién va la mesa.</small></label>
+      <label class="field"><span>Teléfono</span><input type="tel" name="telefono" autocomplete="tel" required pattern="[0-9 +]{9,15}"><small class="err">Un teléfono de 9 cifras o más.</small></label>
+    </div>
+  </form>
+
+  <aside class="form-aside" aria-label="Resumen de la reserva">
+    <div class="ph r43" data-reveal><img src="img/salsas-1000.webp" srcset="img/salsas-1000.webp 1000w, img/salsas-2400.webp 2400w" sizes="(min-width: 900px) 50vw, 100vw" width="2400" height="1800" alt="Chimichurri, salsa de pimienta y tostas, lo primero que llega a la mesa" loading="lazy"></div>
+    <div class="summary">
+      <p data-summary aria-live="polite">Mesa para 2 personas en Félix Boix.</p>
+      <button class="btn" type="submit" form="book-form" data-send>Enviar la petición por correo</button>
+      <p class="soft" data-send-note>Se abre tu correo con la petición escrita. La casa te confirma la mesa.</p>
+    </div>
+    <p class="form-note">El reservado de Félix Boix es para grupos de hasta 50 personas. Para un grupo grande, mejor <a href="grupos.html">pide presupuesto</a>.</p>
+  </aside>
+</section>

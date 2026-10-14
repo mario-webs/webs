@@ -1,0 +1,276 @@
+<!--{"title":"La carta · De María, asador argentino en Madrid","description":"La carta de De María: carnes a la brasa de carbón, ojo de bife, chuletón, asado de tira, mollejas, provoleta, pastas, pescados y postres artesanos, con precios.","nav":"carta"}-->
+<section class="page-head grid" aria-labelledby="carta-t">
+  <h1 id="carta-t" data-reveal>La carta</h1>
+  <div class="ph-lead" data-reveal>
+    <p class="statement">Cada corte llega con el chimichurri y la salsa de pimienta de la casa.</p>
+    <p class="soft">Precios en euros, IVA incluido. Servicio de mesa por persona, 3,70 €. Es la carta de Félix Boix; en Preciados y Majadahonda puede cambiar algún plato.</p>
+    <div class="actions">
+      <a class="btn" href="reservar.html">Reservar mesa</a>
+      <button class="more" type="button" onclick="print()">Imprimir la carta</button>
+    </div>
+  </div>
+  <figure class="ph-photo" data-reveal>
+    <div class="ph r43"><img src="img/chuleton-tablas-1000.webp" srcset="img/chuleton-tablas-1000.webp 1000w, img/chuleton-tablas-1311.webp 1311w" sizes="(min-width: 900px) 50vw, 100vw" width="1311" height="983" alt="Dos tablas de chuletón fileteado con pimientos asados y pan" fetchpriority="high"></div>
+    <figcaption class="cap">Chuletón fileteado para tres, 95,50 €.</figcaption>
+  </figure>
+</section>
+
+<section class="cortes grid" aria-labelledby="cortes-t" data-cortes>
+  <div class="cortes-text" data-reveal>
+    <h2 id="cortes-t">El mapa de cortes</h2>
+    <p>Toca una pieza de la res para ver qué es y cómo se pide aquí.</p>
+    <nav class="cortes-picks" aria-label="Cortes">
+      <a data-cut="lomo-alto" href="#corte-lomo-alto">Lomo alto</a>
+      <a data-cut="lomo-bajo" href="#corte-lomo-bajo">Lomo bajo</a>
+      <a data-cut="solomillo" href="#corte-solomillo">Solomillo</a>
+      <a data-cut="costillar" href="#corte-costillar">Costillar</a>
+      <a data-cut="molleja" href="#corte-molleja">Molleja</a>
+    </nav>
+  </div>
+  <div class="cortes-map" data-reveal>
+    <svg viewBox="0 0 800 440" role="group" aria-label="Despiece de la res con los cortes de la carta">
+      <g class="cow" aria-hidden="true">
+        <path d="M215,298 L262,312 L258,420 L230,420 Z"/><path d="M272,320 L300,322 L298,420 L272,420 Z"/>
+        <path d="M664,300 L702,306 L712,420 L686,420 Z"/><path d="M708,306 L735,305 L742,420 L716,420 Z"/>
+        <path d="M742,138 C770,170 772,230 766,292 L756,292 C760,232 758,180 734,146 Z"/>
+        <path d="M162,112 L176,88 L182,114 Z"/>
+      </g>
+      <g aria-hidden="true">
+        <path class="cut" d="M190,128 L160,110 L140,84 L146,112 L112,122 L66,150 L42,186 L50,212 L92,226 L142,236 L205,250 Z"/>
+        <path class="cut" d="M260,112 L350,106 L355,200 L270,230 Z"/>
+        <path class="cut" d="M570,110 L650,112 L655,200 L575,212 L572,175 Z"/>
+        <path class="cut" d="M650,112 L720,124 L745,170 L745,260 L730,310 L660,300 L655,200 Z"/>
+        <path class="cut" d="M205,250 L270,230 L300,322 L205,300 Z"/>
+        <path class="cut" d="M465,226 L575,212 L655,200 L660,300 L580,316 L450,326 Z"/>
+      </g>
+      <a class="cutlink" data-cut="molleja" href="#corte-molleja" aria-label="Molleja"><path class="cut" d="M190,128 L260,112 L270,230 L205,250 Z"/><text class="cut-label" x="203" y="190">Molleja</text></a>
+      <a class="cutlink" data-cut="lomo-alto" href="#corte-lomo-alto" aria-label="Lomo alto"><path class="cut" d="M350,106 L460,108 L462,190 L355,200 Z"/><text class="cut-label" x="370" y="158">Lomo alto</text></a>
+      <a class="cutlink" data-cut="lomo-bajo" href="#corte-lomo-bajo" aria-label="Lomo bajo"><path class="cut" d="M460,108 L570,110 L572,175 L462,190 Z"/><text class="cut-label" x="478" y="152">Lomo bajo</text></a>
+      <a class="cutlink" data-cut="solomillo" href="#corte-solomillo" aria-label="Solomillo"><path class="cut" d="M462,190 L572,175 L575,212 L465,226 Z"/><text class="cut-label" x="484" y="209">Solomillo</text></a>
+      <a class="cutlink" data-cut="costillar" href="#corte-costillar" aria-label="Costillar"><path class="cut" d="M270,230 L355,200 L462,190 L465,226 L450,326 L300,322 Z"/><text class="cut-label" x="335" y="272">Costillar</text></a>
+    </svg>
+  </div>
+  <div class="cortes-cards" aria-live="polite">
+    <article class="corte" id="corte-lomo-alto">
+      <h3>Lomo alto</h3>
+      <p>La parte delantera del lomo, sobre las costillas. Es un corte muy veteado: de aquí salen el ojo de bife y el chuletón.</p>
+      <ul class="dishes">
+        <li><span class="dish">Ojo de bife</span><span class="price">34,00</span></li>
+        <li><span class="dish">Chuletón fileteado, para 2</span><span class="price">66,30</span></li>
+        <li><span class="dish">Chuletón fileteado, para 3</span><span class="price">95,50</span></li>
+      </ul>
+    </article>
+    <article class="corte" id="corte-lomo-bajo">
+      <h3>Lomo bajo</h3>
+      <p>Sigue al lomo alto hacia la cadera, más magro y firme. En Argentina es el bife de chorizo; aquí, el lomo o entrecot. El T-bone lleva lomo bajo a un lado del hueso y solomillo al otro.</p>
+      <ul class="dishes">
+        <li><span class="dish">Lomo (entrecot)</span><span class="price">31,60</span></li>
+        <li><span class="dish">T-bone Angus</span><span class="price">73,60</span><small>1 kg aproximadamente</small></li>
+      </ul>
+    </article>
+    <article class="corte" id="corte-solomillo">
+      <h3>Solomillo</h3>
+      <p>Va por debajo del lomo bajo y es el músculo que menos trabaja de la res: el corte más tierno.</p>
+      <ul class="dishes">
+        <li><span class="dish">Solomillo</span><span class="price">36,90</span></li>
+        <li><span class="dish">Solomillo al oporto con foie</span><span class="price">38,40</span></li>
+      </ul>
+    </article>
+    <article class="corte" id="corte-costillar">
+      <h3>Costillar</h3>
+      <p>Las costillas cortadas a lo largo, atravesando el hueso. Es el asado de tira de las parrillas de Buenos Aires, con la grasa dorada a la brasa.</p>
+      <ul class="dishes">
+        <li><span class="dish">Asado de tira</span><span class="price">30,00</span></li>
+      </ul>
+    </article>
+    <article class="corte" id="corte-molleja">
+      <h3>Molleja</h3>
+      <p>Es el timo de la ternera, una glándula entre el cuello y el pecho. A la brasa queda crujiente por fuera y tierna por dentro.</p>
+      <ul class="dishes">
+        <li><span class="dish">Mollejas de ternera</span><span class="price">20,50</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="chapter chapter-short" aria-labelledby="parrilla-t">
+  <video autoplay muted loop playsinline preload="metadata" poster="img/brasa-2000.webp" aria-label="La brasa de carbón bajo la parrilla de De María"><source src="video/parrilla.webm" type="video/webm"><source src="video/parrilla.mp4" type="video/mp4"></video>
+  <div class="chapter-text" data-reveal>
+    <h2 id="parrilla-t">Todo pasa por la brasa</h2>
+    <p>Parrilla de carbón, cortes de asador argentino y el punto que pidas. Debajo, la carta entera.</p>
+  </div>
+</section>
+
+<div class="carta-wrap grid">
+  <nav class="carta-nav" aria-label="Secciones de la carta">
+    <ul>
+      <li><a href="#entradas">Entradas</a></li>
+      <li><a href="#parrilla">Parrilla</a></li>
+      <li><a href="#carnes">Carnes a la brasa</a></li>
+      <li><a href="#cocina">Cocina</a></li>
+      <li><a href="#pescados">Pescados</a></li>
+      <li><a href="#ensaladas">Ensaladas</a></li>
+      <li><a href="#verduras">Verduras</a></li>
+      <li><a href="#pastas">Pastas rellenas</a></li>
+      <li><a href="#guarniciones">Guarniciones</a></li>
+      <li><a href="#postres">Postres</a></li>
+      <li><a href="#grupos">Menús para grupos</a></li>
+    </ul>
+  </nav>
+
+  <div class="carta-body">
+    <section class="cat" id="entradas" aria-labelledby="c-entradas">
+      <h2 id="c-entradas" data-reveal>Entradas</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Tomate relleno con mousse de ventresca</span><span class="price">10,90</span></li>
+        <li><span class="dish">Tarrina de foie de pato con mermelada de tomate</span><span class="price">28,10</span></li>
+        <li><span class="dish">Tartar de atún con crema de pistacho</span><span class="price">35,60</span></li>
+        <li><span class="dish">Anchoas de Santoña en aceite de oliva virgen extra</span><span class="price">26,20</span><small>8 unidades</small></li>
+        <li><span class="dish">Lomos de sardinas ahumadas del Cantábrico</span><span class="price">19,10</span><small>Sobre base de tomate, 4 lomos</small></li>
+        <li><span class="dish">Huevos rotos</span><span class="price">17,90</span><small>Con patatas y jamón ibérico</small></li>
+        <li><span class="dish">Empanadilla criolla</span><span class="price">6,30</span><small>Rellena de carne</small></li>
+        <li><span class="dish">Jamón ibérico de bellota</span><span class="price">37,70</span></li>
+        <li><span class="dish">Burrata sobre tartar de aguacate y tomate</span><span class="price">18,80</span><small>Tomate Daniela con pesto</small></li>
+      </ul>
+    </section>
+
+    <section class="cat" id="parrilla" aria-labelledby="c-parrilla">
+      <h2 id="c-parrilla" data-reveal>Parrilla<small>Al carbón, para empezar a compartir</small></h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Chorizo criollo</span><span class="price">7,40</span></li>
+        <li><span class="dish">Mollejas de ternera</span><span class="price">20,50</span></li>
+        <li><span class="dish">Provoleta de oreganato</span><span class="price">15,70</span><small>Con aceite de oliva virgen</small></li>
+        <li><span class="dish">Provoleta De María</span><span class="price">19,00</span><small>Jamón, tomate y pimientos asados</small></li>
+      </ul>
+    </section>
+
+    <figure class="cat-photo" data-reveal>
+      <div class="ph r43"><img src="img/provoleta-1000.webp" srcset="img/provoleta-1000.webp 1000w, img/provoleta-2400.webp 2400w" sizes="(min-width: 900px) 50vw, 100vw" width="2400" height="1800" alt="Provoleta de oreganato en plato blanco" loading="lazy"></div>
+      <figcaption class="cap">Provoleta de oreganato, 15,70 €.</figcaption>
+    </figure>
+
+    <section class="cat" id="carnes" aria-labelledby="c-carnes">
+      <h2 id="c-carnes" data-reveal>Carnes a la brasa<small>Con chimichurri y salsa de pimienta</small></h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Chuletón fileteado, para 2 personas</span><span class="price">66,30</span></li>
+        <li><span class="dish">Chuletón fileteado, para 3 personas</span><span class="price">95,50</span></li>
+        <li><span class="dish">Ojo de bife</span><span class="price">34,00</span></li>
+        <li><span class="dish">Lomo (entrecot)</span><span class="price">31,60</span></li>
+        <li><span class="dish">T-bone Angus</span><span class="price">73,60</span><small>1 kg aproximadamente</small></li>
+        <li><span class="dish">Solomillo</span><span class="price">36,90</span></li>
+        <li><span class="dish">Asado de tira</span><span class="price">30,00</span></li>
+        <li><span class="dish">Secreto ibérico</span><span class="price">25,20</span><small>Con mermelada de guindilla</small></li>
+        <li><span class="dish">Medio pollo deshuesado al limón</span><span class="price">21,10</span></li>
+      </ul>
+    </section>
+
+    <figure class="cat-photo" data-reveal>
+      <div class="ph r34"><img src="img/chuleton-patatas-800.webp" srcset="img/chuleton-patatas-800.webp 800w, img/chuleton-patatas-1200.webp 1200w" sizes="(min-width: 900px) 50vw, 100vw" width="1200" height="1600" alt="Chuletón fileteado sobre tabla con patatas fritas y pimientos" loading="lazy"></div>
+      <figcaption class="cap">Chuletón con patatas y pimientos asados.</figcaption>
+    </figure>
+
+    <section class="cat" id="cocina" aria-labelledby="c-cocina">
+      <h2 id="c-cocina" data-reveal>Cocina</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Solomillo al oporto con foie</span><span class="price">38,40</span></li>
+        <li><span class="dish">Pollo De María</span><span class="price">26,60</span><small>Con salsa de setas y jamón</small></li>
+      </ul>
+    </section>
+
+    <section class="cat" id="pescados" aria-labelledby="c-pescados">
+      <h2 id="c-pescados" data-reveal>Pescados</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Atún rojo con aceite de soja</span><span class="price">37,60</span></li>
+        <li><span class="dish">Sapito (rape) a la donostiarra</span><span class="price">35,90</span></li>
+        <li><span class="dish">Rape con salsa de azafrán y almejas</span><span class="price">37,70</span></li>
+        <li><span class="dish">Merluza en salsa de puerros y espinacas</span><span class="price">30,40</span></li>
+        <li><span class="dish">Corvina a la plancha con verduras</span><span class="price">32,70</span></li>
+      </ul>
+    </section>
+
+    <section class="cat" id="ensaladas" aria-labelledby="c-ensaladas">
+      <h2 id="c-ensaladas" data-reveal>Ensaladas</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Mixta</span><span class="price">14,50</span><small>Lechuga, tomate, huevo, cebolla, atún y maíz</small></li>
+        <li><span class="dish">Siempre verde</span><span class="price">11,50</span><small>Hoja de roble, lollo rosa, endibias, canónigos, rúcula, espinaca y piñones</small></li>
+        <li><span class="dish">Tomate con ventresca y cebolla</span><span class="price">16,30</span></li>
+        <li><span class="dish">Rúcula selvática</span><span class="price">19,00</span><small>Tomate confitado, lascas de parmesano y vinagreta de oliva</small></li>
+        <li><span class="dish">Queso de cabra gratinado</span><span class="price">17,20</span><small>Mezclum, cherry, cebolla caramelizada y puré de higo</small></li>
+        <li><span class="dish">César con pollo a la brasa</span><span class="price">14,60</span></li>
+        <li><span class="dish">De María</span><span class="price">14,80</span><small>Lechuga, manzana, roquefort y nueces</small></li>
+        <li><span class="dish">Tropical</span><span class="price">24,50</span><small>Canónigos, rúcula, mango, palmitos, aguacate y langostinos</small></li>
+      </ul>
+    </section>
+
+    <figure class="cat-photo" data-reveal>
+      <div class="ph r43"><img src="img/queso-cabra-1000.webp" srcset="img/queso-cabra-1000.webp 1000w, img/queso-cabra-2048.webp 2048w" sizes="(min-width: 900px) 50vw, 100vw" width="2048" height="1536" alt="Ensalada de queso de cabra gratinado con mezclum y tomate cherry" loading="lazy"></div>
+      <figcaption class="cap">Queso de cabra gratinado, 17,20 €.</figcaption>
+    </figure>
+
+    <section class="cat" id="verduras" aria-labelledby="c-verduras">
+      <h2 id="c-verduras" data-reveal>Verduras</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Verdura variada a la plancha</span><span class="price">21,70</span></li>
+        <li><span class="dish">Alcachofas a la plancha</span><span class="price">19,70</span><small>4 unidades</small></li>
+        <li><span class="dish">Brócoli al vapor con patatas</span><span class="price">9,90</span></li>
+      </ul>
+    </section>
+
+    <section class="cat" id="pastas" aria-labelledby="c-pastas">
+      <h2 id="c-pastas" data-reveal>Pastas rellenas</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Cardinalle</span><span class="price">20,30</span><small>Berenjena y queso de cabra, con salsa de queso fossa</small></li>
+        <li><span class="dish">Ravioli piaceri</span><span class="price">19,00</span><small>Cinco quesos, con tomate y nata</small></li>
+        <li><span class="dish">Dolce Vita</span><span class="price">23,10</span><small>Rellena de trufa, con nata y tartufo</small></li>
+        <li><span class="dish">Ravioli de ricota de búfala y espinaca</span><span class="price">23,10</span><small>Con pesto rosa y parmesano</small></li>
+        <li><span class="dish">Spaguetti</span><span class="price">17,80</span><small>Al fileto, boloñesa o pesto</small></li>
+      </ul>
+    </section>
+
+    <figure class="cat-photo" data-reveal>
+      <div class="ph r43"><img src="img/verduras-800.webp" srcset="img/verduras-800.webp 800w, img/verduras-1300.webp 1300w" sizes="(min-width: 900px) 50vw, 100vw" width="1300" height="975" alt="Verdura variada a la plancha: berenjena, calabacín, espárragos y pimiento" loading="lazy"></div>
+      <figcaption class="cap">Verdura variada a la plancha, 21,70 €.</figcaption>
+    </figure>
+
+    <section class="cat" id="guarniciones" aria-labelledby="c-guarniciones">
+      <h2 id="c-guarniciones" data-reveal>Guarniciones</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Patatas soufflé</span><span class="price">17,20</span></li>
+        <li><span class="dish">Mixto de patatas y pimientos de Guernica</span><span class="price">9,50</span></li>
+        <li><span class="dish">Patatas fritas</span><span class="price">8,20</span></li>
+        <li><span class="dish">Patatas de rejilla</span><span class="price">8,20</span></li>
+        <li><span class="dish">Pimientos asados</span><span class="price">8,00</span></li>
+        <li><span class="dish">Patata asada</span><span class="price">6,10</span><small>Con crema agria y bacón</small></li>
+      </ul>
+    </section>
+
+    <section class="cat" id="postres" aria-labelledby="c-postres">
+      <h2 id="c-postres" data-reveal>Postres artesanos</h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Panqueque de dulce de leche</span><span class="price">10,00</span></li>
+        <li><span class="dish">Milhojas con dulce de leche</span><span class="price">11,70</span></li>
+        <li><span class="dish">Tatín de manzana</span><span class="price">12,30</span></li>
+        <li><span class="dish">Pájaro tropical</span><span class="price">11,70</span><small>Piña rellena y crema catalana con costra crujiente</small></li>
+        <li><span class="dish">Tarta de queso templada</span><span class="price">11,00</span><small>Con coulis de guayaba</small></li>
+        <li><span class="dish">Tarta de chocolate</span><span class="price">8,80</span><small>Con helado de mandarina</small></li>
+        <li><span class="dish">New York cheesecake</span><span class="price">10,10</span></li>
+        <li><span class="dish">Brownie con helado de vainilla</span><span class="price">11,10</span></li>
+        <li><span class="dish">Tiramisú</span><span class="price">9,30</span></li>
+        <li><span class="dish">Macedonia de frutas</span><span class="price">8,90</span></li>
+        <li><span class="dish">Helados artesanos</span><span class="price">8,90</span><small>Dulce de leche, mandarina, turrón, plátano con dulce de leche y más</small></li>
+        <li><span class="dish">Tarta de queso sin gluten</span><span class="price">10,10</span></li>
+      </ul>
+    </section>
+
+    <section class="cat" id="grupos" aria-labelledby="c-grupos">
+      <h2 id="c-grupos" data-reveal>Menús para grupos<small>Con reserva previa</small></h2>
+      <ul class="dishes" data-reveal>
+        <li><span class="dish">Menú degustación</span><span class="price">30,00</span><small>Por persona</small></li>
+        <li><span class="dish">Menú especial</span><span class="price">50,00</span><small>Por persona</small></li>
+        <li><a class="more" href="grupos.html">Pedir presupuesto para un grupo</a></li>
+      </ul>
+    </section>
+
+    <p class="carta-foot">Precios en euros con IVA incluido. Servicio de mesa por persona, 3,70 €. Si tienes alguna alergia o intolerancia, díselo al camarero antes de pedir.</p>
+  </div>
+</div>
