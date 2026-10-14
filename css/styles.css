@@ -136,6 +136,9 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
 /* la nueva entra por encima; la anterior se oculta cuando la nueva ya está entera, sin bajón a negro */
 .hero-media img{opacity:0;transition:opacity 0s 1.6s}
 .hero-media img.on{opacity:1;z-index:1;transition:opacity 1.6s ease}
+/* La casa: en móvil, foto vertical en lugar del vídeo apaisado */
+.hero-media .hero-m{display:none}
+@media (max-width:899px){.hero-media .hero-m{display:block}.hero-media:has(.hero-m) video{display:none}}
 .hero-media::before,.hero-media::after{content:"";position:absolute;left:0;right:0;z-index:2;pointer-events:none}
 .hero-media::before{top:0;height:180px;background:linear-gradient(rgb(10 5 3 / .55),rgb(10 5 3 / 0))} /* taste-skill-ignore: velo neutro sobre foto */
 .hero-media::after{bottom:0;height:62%;background:linear-gradient(rgb(10 5 3 / 0),rgb(10 5 3 / .78))} /* taste-skill-ignore: velo neutro sobre foto */
@@ -160,7 +163,8 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
 .ph-photo.narrow{grid-column:8/12}
 @media (max-width:899px){
   .ph-lead,.ph-photo,.ph-photo.narrow{grid-column:1/-1}
-  .ph-photo{margin-top:40px;width:84%;justify-self:end}
+  .ph-photo{margin-top:40px;margin-inline:calc(var(--m) * -1);width:auto}
+  .ph-photo .cap{padding-inline:var(--m)}
 }
 
 /* ---------- entrada: un párrafo en papel ---------- */
@@ -211,7 +215,9 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
   .rows .k{grid-column:1/-1;grid-row:2;font-size:var(--t5)}
   .rows .v{grid-row:1}
   .rows .r{grid-row:1}
-  .tbl-photo{grid-column:4/-1;grid-row:auto;margin-top:48px}
+  .tbl-photo{grid-column:1/-1;grid-row:auto;margin-top:40px;margin-inline:calc(var(--m) * -1);width:auto}
+  .tbl-photo .ph{aspect-ratio:4/3}
+  .tbl-photo .cap{padding-inline:var(--m)}
 }
 
 /* ---------- el ritual: título fijo, las escenas pasan ---------- */
@@ -227,9 +233,10 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
 @media (max-width:899px){
   .ritual-pin{grid-column:1/-1;position:static;height:auto;padding-top:var(--sec)}
   .ritual-pin h2{font-size:clamp(3rem,17vw,5rem)}
-  .ritual-steps{grid-column:1/-1;grid-row:2;padding-block:56px 96px;row-gap:56px;grid-template-columns:1fr}
-  .step{width:72%}
-  .step:nth-child(even){margin-top:0;justify-self:end}
+  .ritual-steps{grid-column:1/-1;grid-row:2;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--m);padding:32px var(--m) 72px;margin-inline:calc(var(--m) * -1);scrollbar-width:none;overscroll-behavior-x:contain}
+  .ritual-steps::-webkit-scrollbar{display:none}
+  .step{flex:0 0 80%;scroll-snap-align:start}
+  .step:nth-child(even){margin-top:0}
   .step .ph{aspect-ratio:4/5}
 }
 
@@ -247,18 +254,18 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
 }
 
 /* ---------- cierre: frase, foto, dos enlaces ---------- */
-.close{padding-block:var(--sec);align-items:start}
+.close{padding-block:clamp(56px,7vw,104px);margin-top:var(--sec);background:var(--surface);align-items:center}
 .close .statement{grid-column:1/6}
-.close-photo{grid-column:8/10;width:clamp(120px,11vw,170px)}
+.close-photo{grid-column:7/10;width:100%;aspect-ratio:4/5}
 .close-links{grid-column:10/13;display:grid;gap:12px;align-content:start}
 .close-links h2{font:600 var(--t4)/1.3 var(--sans);letter-spacing:0;margin-bottom:8px}
 .close-links a{font-size:var(--t4)}
 .close-links .soft{color:var(--ink)}
 @media (max-width:899px){
-  .close{padding-block:var(--sec) 96px;row-gap:32px}
+  .close{padding-block:48px 56px;row-gap:28px}
   .close .statement{grid-column:1/-1}
-  .close-photo{grid-column:1/5;width:96px}
-  .close-links{grid-column:5/-1}
+  .close-photo{grid-column:1/-1;aspect-ratio:16/10}
+  .close-links{grid-column:1/-1}
 }
 
 /* ---------- pie: reservar, las tres casas y el nombre ---------- */
@@ -315,6 +322,7 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
 /* ---------- capítulo: una foto o un vídeo a pantalla completa ---------- */
 .chapter{position:relative;min-height:max(88svh,560px);display:flex;align-items:flex-end;color:var(--on-dark);background:var(--carbon);overflow:hidden;margin-top:var(--sec)}
 .chapter.chapter-short{min-height:max(70svh,480px)}
+@media (max-width:899px){.chapter.chapter-short{min-height:440px}}
 .chapter>img,.chapter>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .chapter::after{content:"";position:absolute;inset:auto 0 0;height:75%;background:linear-gradient(rgb(10 5 3 / 0),rgb(10 5 3 / .82))} /* taste-skill-ignore: velo neutro sobre foto */
 .chapter-text{position:relative;z-index:1;display:grid;gap:16px;padding:0 var(--m) clamp(32px,5vw,64px);max-width:calc(56ch + 2 * var(--m))}
@@ -397,8 +405,8 @@ button.more{background:none;border:0;padding:0;cursor:pointer;color:inherit}
   .carta-body{grid-column:1/-1;columns:1;margin-top:32px}
   .cat{display:block;padding-bottom:64px}
   .cat .dishes{margin-top:16px}
-  .cat-photo{width:72%;margin:0 0 64px auto}
-  .cat-photo:nth-of-type(even){margin:0 auto 64px 0}
+  .cat-photo{margin:0 calc(var(--m) * -1) 56px}
+  .cat-photo .cap{padding-inline:var(--m)}
 }
 
 /* mapa de cortes */
@@ -438,7 +446,9 @@ a.cutlink.on .cut{fill:var(--accent)}
 .letter-photo{grid-column:8/12;margin-top:120px}
 @media (max-width:899px){
   .letter-text{grid-column:1/-1}
-  .letter-photo{grid-column:3/-1;margin-top:48px}
+  .letter-photo{grid-column:1/-1;margin-top:40px;margin-inline:calc(var(--m) * -1);width:auto}
+  .letter-photo .ph{aspect-ratio:4/3}
+  .letter-photo .cap{padding-inline:var(--m)}
 }
 
 /* formularios */

@@ -78,14 +78,16 @@ const fade = document.querySelector('[data-fade]');
 if (fade && !reduced) {
   const imgs = [...fade.querySelectorAll('img')];
   const cap = document.querySelector('[data-fade-cap]');
-  const caps = ['La parrilla de Félix Boix', 'Las salsas, antes de pedir', 'El chuletón, fileteado en la tabla'];
+  const mobile = matchMedia('(max-width: 899px)');
+  const caption = (img) => (mobile.matches ? img.dataset.capM : img.dataset.cap) ?? '';
+  if (cap) cap.textContent = caption(imgs[0]);
   let i = 0;
   setInterval(() => {
     if (document.hidden) return;
     imgs[i].classList.remove('on');
     i = (i + 1) % imgs.length;
     imgs[i].classList.add('on');
-    if (cap) cap.textContent = caps[i] ?? '';
+    if (cap) cap.textContent = caption(imgs[i]);
   }, 6000);
 }
 
